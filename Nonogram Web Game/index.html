@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picross</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="js/classes.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="manual">
+        <div id="intro">
+            <h4>Welcome to Picross! The nonogram puzzle game.</h4>
+            <p>Here's what you need to know to play:</p>
+        </div>
+
+        <div id="objective">
+            <img src="images/grid.JPG" alt="Grid" id="gridImage">
+            <p>The grid contains many tiles, some are marked tiles, and some are blank (In figure, marked tiles are blue).</p>
+            <p>Your goal is to find all of the marked tiles.</p>
+            <p>Your only hints as to where these marked tiles are are the numbers on the top and left of the grid (As shown below).</p>
+            <img src="images/hintColumns.JPG" alt="column hints" id="hintColumnImage">
+        </div>
+
+        <div id="clues">
+            <img src="images/hint.JPG" alt="Hint" id="hintImage">
+            <p>The numbers indicate groups of marked tiles on the respective row or column. For example having the number 6 in this column means that there is a group of 6 connected marked tiles in this column.</p>
+            <p>Multiple numbers mean multiple groups, so -2 1 3- means that there are a group of 2, a single tile, and a group of 3 active tiles this row/column.</p>
+            <p>What is also important is that the groups MUST ALSO appear in that order (from left to right for rows and top to bottom for columns).</p>
+            <img src="images/hintRows.png" alt="MultiHint" id="hintRowImage">
+            <p>For example, in the case of this hint to the right:</p>
+            <p>There is a group of 4 active tiles, followed by a group of 3 active tiles, then a single active tile.</p>
+        </div>
+
+        <div id="missesExpl">
+            <p>You must use these hints to uncover all of the marked tiles to complete the puzzle.</p>
+            <p>To check a tile as marked, click on the tile. You may also mark a tile as empty by right clicking.</p>
+            <p>Additionally you can click and drag to mark all tiles you touch quickly (This can be disabled in settings).</p>
+            <img src="images/Red_X.png" alt="Red X" id="missImage">
+            <p>If you incorrectly mark a tile, the correct tile will be shown with an X over it. This is a miss.</p>
+            <p>Your number of misses will be tracked on the right. Get as few as you can!</p>
+        </div>
+
+        <div id="hint">
+            <img src="images/button.JPG" alt="Button" id="buttonImage">
+            <p>Lastly, this is the hint button:</p>
+            <p>Clicking the hint button, and then clicking on a tile will reveal that tile correctly every time! (Game area will change color while in hint mode).</p>
+            <p>However, you only get one hint.</p>
+            <p>Make sure to ust it wisely, sometimes the puzzle can have two equally likely solutions, and this hint may be your only way to figure out which is correct!</p>
+        </div>
+
+        <div id="outro">
+            <p>That's everything, have fun!</p>
+            <button type="button" id="manualClose">Click Here to Exit Manual</button>
+        </div>
+    </div>
+
+    <header id="title">
+        <h1>Picross</h1>
+    </header>
+    <div id="info">
+        <h2>Progress</h2>
+        <p id="progress">0/100</p>
+        <p>-----------------</p>
+        <h2>Misses</h2>
+        <p id="misses">0</p>
+        <p>-----------------</p>
+        <p id="endingMessage"></p>
+    </div>
+    <div id="game">
+        <div id="grid">
+            
+        </div>
+        <p id="reminder">Click to mark tile as active, right click to mark tile as empty.</p>
+    </div>
+    <div id="widgets">
+        <h3>Help</h3>
+        <button type="button" id="howto">How To Play</button>
+        <button type="button" id="hintbutton">Hint</button>
+        <p id="hintCount">1/1</p>
+        <h3>Settings</h3>
+        <p><input type="checkbox" id="dragToggle" checked> Enable Dragging</p>
+        <p>
+            <select name="color" id="color">
+				<option value="blue">Blue</option>
+				<option value="crimson">Red</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="purple">Purple</option>
+				<option value="black">Black</option>
+				<option value="orange">Orange</option>
+				<option value="pink">Pink</option>
+				<option value="cyan">Cyan</option>
+				<option value="brown">Brown</option>
+				<option value="limegreen">Lime</option>
+				<option value="maroon">Maroon</option>
+				<option value="teal">Teal</option>
+				<option value="salmon">Salmon</option>
+				<option value="hotpink">Hot Pink</option>
+				<option value="orangered">Orange Red</option>
+				<option value="navy">Navy Blue</option>
+				<option value="magenta">Magenta</option>
+			</select>
+            Color
+        </p>
+        
+        <button type="button" id="start">New Game</button>
+        <p id="startData">-------------------------------</p>
+        <button type="button" id="giveup">Give Up</button>
+    </div>
+    <footer id="credits">
+        <p>Made by Aiden Grieshaber | 2022</p>
+        <a href="about.html">Documentation</a>
+    </footer>
+</body>
+</html>

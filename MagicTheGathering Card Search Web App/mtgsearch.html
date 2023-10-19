@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+ 	<title>MTG Card Search</title>
+ 	<link rel="stylesheet" href="styles/main.css">
+
+  <script src="js/main.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<h1>MTG Card Search</h1>
+</header>
+
+<div id="bigCard"></div>
+
+<div class="widgets" id="options">
+	<div class="filter">
+		<p>Card Name:</p>
+		<input type="text" size="20" maxlength="30" id="searchterm">
+	</div>
+
+	<div class="filter">
+		<p>Color(s):</p>
+		<ul id="colors">
+			<li><input type="checkbox" name="color" value="w"> White </li>
+			<li><input type="checkbox" name="color" value="u"> Blue </li>
+			<li><input type="checkbox" name="color" value="b"> Black </li>
+			<li><input type="checkbox" name="color" value="r"> Red </li>
+			<li><input type="checkbox" name="color" value="g"> Green </li>
+			<li><input type="checkbox" name="color" value="c"> Colorless </li>
+		</ul>
+	</div>
+
+	<div class="filter">
+		<p>Type:</p>
+		<ul id="types">
+			<li><input type="checkbox" name="cardType" value="creature"> Creature </li>
+			<li><input type="checkbox" name="cardType" value="instant"> Instant </li>
+			<li><input type="checkbox" name="cardType" value="sorcery"> Sorcery </li>
+			<li><input type="checkbox" name="cardType" value="enchantment"> Enchantment </li>
+			<li><input type="checkbox" name="cardType" value="artifact"> Artifact </li>
+			<li><input type="checkbox" name="cardType" value="land"> Land </li>
+			<li><input type="checkbox" name="cardType" value="planeswalker"> Planeswalker </li>
+			<li><input type="checkbox" name="cardType" value="legend"> Legendary </li>
+			<li>Other type: <input id="extraCardType" type="text" size="16" maxlength="20"/></li>
+		</ul>
+	</div>
+	
+	<div class="filter">
+		<p>Rarity:</p>
+		<ul id="rare">
+			<li><input type="radio" name="rarity" value="" checked> Any </li>
+			<li><input type="radio" name="rarity" value="common"> Common </li>
+			<li><input type="radio" name="rarity" value="uncommon"> Uncommon </li>
+			<li><input type="radio" name="rarity" value="rare"> Rare </li>
+				<li><input type="radio" name="rarity" value="mythic"> Mythic </li>
+		</ul>
+	</div>
+
+	<div class="filter">
+		<p>Converted Mana Cost: 
+			<select name="cmc" id="cmc">
+				<option value="">-</option>
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+			</select>
+			</p>
+	</div>
+</div>
+
+<div class="widgets" id="searchButton">
+	<button type="button" id="search" class="green">Search Cards</button>
+</div>
+
+<div id="status">
+	Ready to search
+</div>
+
+<hr>
+
+<div id="content">
+	<p></p>
+</div>
+
+<footer>
+	<p>Made by Aiden Grieshaber</p>
+</footer>
+</body>
+</html>

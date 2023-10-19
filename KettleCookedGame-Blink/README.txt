@@ -1,0 +1,1 @@
+Blink was a game I worked on as a group acedemic project. As such, other students were involved in its development. The files included in this folder are the scripts that were created mostly or entirely by me for the project, others will not be included.

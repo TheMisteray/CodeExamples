@@ -1,0 +1,276 @@
+#title{grid-area: title;}
+#info{grid-area: info;}
+#game{grid-area: game;}
+#widgets{grid-area: buttons;}
+#credits{grid-area: credits;}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 8fr 1fr;
+    grid-template-areas: 
+    "title title title"
+    "info game buttons"
+    "credits credits credits";
+
+    width: 90%;
+    height: 100%;
+
+    justify-content: center;
+
+    background-color: skyblue;
+
+    margin: auto;
+
+    font-family: 'PT Sans', sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+#info{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius : 10px;
+}
+
+#game{
+    border: 1px solid black;
+    border-radius : 40px;
+    margin: 20px;
+    padding: 40px;
+    padding-bottom: 10px;
+}
+
+#game p{
+    margin: 20px 0px;
+    text-align: center;
+}
+
+#widgets{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius : 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#widgets p{
+    margin: 2px 0;
+}
+
+#credits{
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+    margin: 20px 0px;
+}
+
+h2, h3{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+button{
+    display: block;
+    margin: 12px 8px;
+    padding: 10px 8px;
+    font-size: 20px;
+
+    border-color: #bfd5d6;
+    background: linear-gradient(180deg, #a6bec0 0%,#7b8076 100%);
+
+    border-radius : 10px;
+}
+
+#hint{
+    font-size: 18px;
+    margin: 6px 12px;
+    margin-top: 0px;
+    padding: 2px 2px;
+}
+
+#start{
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+#giveup{
+    font-size: 14px;
+    margin: 12px 36px;
+    margin-top: 0px;
+    padding: 2px 2px;
+}
+
+button:hover{
+    background: linear-gradient(180deg, #bbd6d8 0%,#9da396 100%);
+}
+
+button:active{
+    box-shadow : 0 0 6px rgba(0,0,0,.6);
+    background: linear-gradient(180deg, #7e9092 0%,#585c55 100%);
+}
+
+#grid{
+    display: grid;
+
+    width: auto;
+    height: auto;
+
+    margin: auto;
+
+    grid-template-columns: 80px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 80px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+
+    align-content: center;
+    justify-content: center;
+
+    gap: 0px;
+}
+
+#grid p{
+    margin: 0px 0px;
+}
+
+#grid .columnInfo{
+    width: 40px;
+    height: 80px;
+
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#grid .rowInfo{
+    width: 80px;
+    height: 40px;
+
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rowInfo p{
+    padding: 0px 4px;
+}
+
+.columnInfo p{
+    padding: 0px 0px;
+}
+
+#grid .clickNode{
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid black;
+
+    background-color: white;
+}
+
+#grid .clickNode:hover{
+    background-color: yellow;
+}
+
+#grid .clickNode:active{
+    background-color: orange;
+}
+
+.clickNode img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#intro{grid-area: intro;}
+#objective{grid-area: objective;}
+#clues{grid-area: clues;}
+#missesExpl{grid-area: misses;}
+#hintButton{grid-area: hintButton;}
+#outro{grid-area: outro;}
+
+#manual{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    grid-template-areas: "intro intro"
+                        "objective clues"
+                        "misses hintButton"
+                        "outro outro";
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 15vh 35vh 35vh 15vh;
+
+    left: -200vw;
+
+    text-align: left;
+    color: white;
+
+    background-color: rgba(21, 0, 138, 0.9);
+}
+
+#intro, #outro{
+    text-align: center;
+}
+
+#manual div{
+    margin: 2px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+#manual h4{
+    font-size: 2rem;
+    margin: 10px;
+}
+
+#manual p{
+    font-size: 1.2rem;
+    margin: 10px 0px;
+}
+
+#gridImage{
+    float: right;
+    height: 70%;
+    margin-left: 20px;
+}
+
+#hintImage{
+    float: right;
+    margin: 0px 20px
+}
+
+#hintRowImage{
+    float: right;
+    margin: 0px 20px;
+}
+
+#missImage{
+    width: 10%;
+    float: right;
+    margin: 0px 20px;
+}
+
+#buttonImage{
+    float: right;
+    margin: 0px 20px
+}
+
+#manualClose{
+    display: inline;
+}

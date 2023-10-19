@@ -1,0 +1,1 @@
+Code for a Magic The Gathering card searching web application I made. Uses the Scryfall API for card information.
